@@ -19,6 +19,7 @@
     "@react-native-community/eslint-config": "^3.0.1",
     "@testing-library/react-native": "^9.1.0",
     "babel-jest": "^27.5.1",
+    "detox": "^19.5.7",
     "eslint": "^7.0",
     "jest": "^27.5.1",
     "metro-react-native-babel-preset": "^0.70.0",
