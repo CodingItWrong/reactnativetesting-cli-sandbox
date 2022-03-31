@@ -17,6 +17,7 @@
     "@babel/core": "^7.17.8",
     "@babel/runtime": "^7.17.8",
     "@react-native-community/eslint-config": "^3.0.1",
+    "@testing-library/react-native": "^9.1.0",
     "babel-jest": "^27.5.1",
     "eslint": "^7.0",
     "jest": "^27.5.1",
