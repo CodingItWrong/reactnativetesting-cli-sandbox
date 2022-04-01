@@ -16,6 +16,7 @@ import {
   Text,
   useColorScheme,
   View,
+  Pressable,
 } from 'react-native';
 
 import {
@@ -71,6 +72,9 @@ const App: () => Node = () => {
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
           <Text testID="hello">Hello, Detox!</Text>
+          <Pressable testID="mybutton" onPress={() => {}}>
+            <Text>Press Me</Text>
+          </Pressable>
           <Section title="Step One">
             Edit <Text style={styles.highlight}>App.js</Text> to change this
             screen and then come back to see your edits.
