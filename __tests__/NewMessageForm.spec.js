@@ -10,7 +10,7 @@ describe('NewMessageForm', () => {
       fireEvent.changeText(getByPlaceholderText('Message'), 'Hello world');
       fireEvent.press(getByText('Send'));
 
-      expect(getByPlaceholderText('Message').props.value).toEqual('');
+      expect(getByPlaceholderText('Message')).toHaveProp('value', '');
     });
 
     it('calls the onSend prop', () => {
