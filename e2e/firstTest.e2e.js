@@ -16,4 +16,11 @@ describe('App', () => {
     await element(by.id('mybutton')).tap();
     await element(by.text('Press Me')).tap();
   });
+
+  it('should allow typing', async () => {
+    await element(by.id('mytextinput')).typeText('I typed this');
+    await element(by.id('mytextinput')).clearText();
+    await element(by.id('mytextinput')).typeText('I also typed this');
+    await element(by.id('mytextinput')).replaceText('This too');
+  });
 });

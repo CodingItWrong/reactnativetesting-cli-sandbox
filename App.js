@@ -6,7 +6,7 @@
  * @flow strict-local
  */
 
-import React from 'react';
+import React, {useState} from 'react';
 import type {Node} from 'react';
 import {
   SafeAreaView,
@@ -17,6 +17,7 @@ import {
   useColorScheme,
   View,
   Pressable,
+  TextInput,
 } from 'react-native';
 
 import {
@@ -54,6 +55,7 @@ const Section = ({children, title}): Node => {
 };
 
 const App: () => Node = () => {
+  const [input, setInput] = useState('');
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
@@ -75,6 +77,12 @@ const App: () => Node = () => {
           <Pressable testID="mybutton" onPress={() => {}}>
             <Text>Press Me</Text>
           </Pressable>
+          <TextInput
+            testID="mytextinput"
+            accessibilityLabel="My Text Input"
+            value={input}
+            onChangeText={setInput}
+          />
           <Section title="Step One">
             Edit <Text style={styles.highlight}>App.js</Text> to change this
             screen and then come back to see your edits.
